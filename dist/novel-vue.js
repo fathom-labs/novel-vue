@@ -23511,7 +23511,7 @@ const loe = (n) => n.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), be = 
     description: "Let us know how we can improve.",
     icon: foe,
     command: ({ editor: e, range: t }) => {
-      e.chain().focus().deleteRange(t).run(), window.open("/feedback", "_blank");
+      e.chain().focus().deleteRange(t).run(), window.open("/feedbacks", "_blank");
     }
   },
   {
