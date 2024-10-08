@@ -23501,12 +23501,6 @@ const loe = (n) => n.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), be = 
   }
 }), Toe = ({ query: n }) => [
   {
-    title: "Continue writing",
-    description: "Use AI to expand your thoughts.",
-    searchTerms: ["gpt"],
-    icon: poe
-  },
-  {
     title: "Send Feedback",
     description: "Let us know how we can improve.",
     icon: foe,
