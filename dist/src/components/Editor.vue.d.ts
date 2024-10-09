@@ -4,6 +4,14 @@ import { EditorProps } from "@tiptap/pm/view";
 import { Editor as EditorClass } from "@tiptap/core";
 declare const _default: import("vue").DefineComponent<{
     /**
+     * The API route to use for the Vercel Blob.
+     * Defaults to "/api/upload".
+     */
+    blobApi: {
+        type: StringConstructor;
+        default: string;
+    };
+    /**
      * The API route to use for the OpenAI completion API.
      * Defaults to "/api/generate".
      */
@@ -89,7 +97,10 @@ declare const _default: import("vue").DefineComponent<{
                         } | {
                             type: string;
                             marks: {
-                                type: string;
+                                type: string; /**
+                                 * The API route to use for the Vercel Blob.
+                                 * Defaults to "/api/upload".
+                                 */
                             }[];
                             text: string;
                         })[];
@@ -182,6 +193,14 @@ declare const _default: import("vue").DefineComponent<{
     editor: import("vue").ShallowRef<import("@tiptap/vue-3").Editor | undefined>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     /**
+     * The API route to use for the Vercel Blob.
+     * Defaults to "/api/upload".
+     */
+    blobApi: {
+        type: StringConstructor;
+        default: string;
+    };
+    /**
      * The API route to use for the OpenAI completion API.
      * Defaults to "/api/generate".
      */
@@ -267,7 +286,10 @@ declare const _default: import("vue").DefineComponent<{
                         } | {
                             type: string;
                             marks: {
-                                type: string;
+                                type: string; /**
+                                 * The API route to use for the Vercel Blob.
+                                 * Defaults to "/api/upload".
+                                 */
                             }[];
                             text: string;
                         })[];
@@ -357,10 +379,11 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
+    completionApi: string;
+    blobApi: string;
+    className: string;
     onUpdate: (editor?: EditorClass | undefined) => void | Promise<void>;
     defaultValue: JSONContent;
-    completionApi: string;
-    className: string;
     extensions: Extension<any, any>[];
     editorProps: EditorProps<any>;
     onDebouncedUpdate: (editor?: EditorClass | undefined) => void | Promise<void>;
