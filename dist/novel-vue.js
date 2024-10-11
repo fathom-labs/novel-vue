@@ -23436,8 +23436,7 @@ const loe = (n) => n.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), be = 
             return;
           o(
             yl(t.editor, {
-              chars: 5e3,
-              offset: 1
+              chars: 5e3
             })
           );
         } else
